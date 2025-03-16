@@ -1,0 +1,84 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #d6e3ff;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mattoolbar-navigationbar {
+  top: 0;
+  z-index: 1;
+  background-color: #d6e3ff;
+  color: #4574b5ff;
+}
+
+.toolbar-title {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el icono y el texto */
+  margin-left: 20px; /* Ajusta la distancia desde la izquierda */
+  font-size: 18px;
+}
+
+.buttons-sidebar {
+  display: flex;
+  flex-direction: column;  /* Alinea los botones verticalmente */
+}
+
+.title-sidetoolbar{
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  color: #4574b5ff;
+}
+
+/* Transición suave para la animación */
+mat-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Gira la flecha hacia arriba cuando el menú está abierto */
+.rotate {
+  transform: rotate(180deg);
+}
+
+.spacer {
+  flex: 1; /* Empuja los elementos a la derecha */
+}
+
+/* Ocultar los botones cuando el ancho de la pantalla sea menor a 768px */
+@media (max-width: 540px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .toolbar-title {
+    font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    gap: 0px; /* Reducir el espacio entre el icono y el texto */
+    margin-left: 0%;
+  }
+
+  mat-icon {
+    font-size: 1.2rem; /* Reducir el tamaño del icono en pantallas pequeñas */
+  }
+
+}
+
+@media (max-width: 855px) {
+
+  .toolbar-title {
+    font-size: 1rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    gap: 0px; /* Reducir el espacio entre el icono y el texto */
+    margin-left: 0%;
+  }
+
+  mat-icon {
+    font-size: 1rem; /* Reducir el tamaño del icono en pantallas pequeñas */
+  }
+
+}

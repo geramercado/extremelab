@@ -1,0 +1,25 @@
+.footer {
+    bottom: 0;        /* Asegura que esté pegado al fondo de la página */
+    width: 100%;      /* El footer ocupa todo el ancho */
+    display: flex;    /* Utiliza Flexbox para alinear los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 10px;    /* Espaciado interno */
+    font-size: 14px;  /* Tamaño de la fuente */
+    background-color: #333; /* Un fondo oscuro para el footer, puedes cambiarlo */
+    color: white;     /* Color de la fuente */
+    z-index: 1000;    /* Asegura que el footer esté sobre otros elementos si es necesario */
+}
+
+.spacer {
+    flex-grow: 1;     /* Empuja los elementos a los extremos */
+}
+
+.social-links a {
+    color: white;     /* Color blanco para los enlaces */
+    margin: 0 10px;   /* Espaciado entre los enlaces */
+    text-decoration: none;  /* Elimina el subrayado */
+}
+
+.social-links mat-icon {
+    vertical-align: middle; /* Alineación vertical de los íconos */
+}

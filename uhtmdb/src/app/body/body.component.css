@@ -1,0 +1,219 @@
+.tile-one img {
+  width: 100%; /* La imagen ocupará el 100% del ancho del tile */
+  height: 100%; /* La imagen ocupará el 100% del alto del tile */
+  object-fit: cover; /* Esto asegura que la imagen cubra todo el espacio sin deformarse */
+  filter: brightness(50%);
+}
+
+.twotext-container {
+  position: absolute;
+  display: flex;
+  gap: 50px;
+}
+
+.text-left, .text-right {
+  width: 50%;
+  color: white;  /*Hace que el texto sea visible sobre la imagen*/
+  text-align: center; 
+}
+
+.twotext-container p {
+  font-size: x-large;
+  line-height: 1.2;
+}
+
+.button-register{
+  background-color: #ffdea6ff !important;
+  color: #7a5800ff !important;
+  margin-right: 20px;
+  z-index: 0; /* Ajusta el valor según sea necesario */
+  position: relative; /* Asegura que el z-index se aplique correctamente */
+}
+
+.button-login {
+  z-index: 0; /* Ajusta el valor según sea necesario */
+  position: relative; /* Asegura que el z-index se aplique correctamente */
+  background-color: #d6e3ffff !important;
+  color: #295da6ff !important;
+}
+
+/* -------------------------------  mobile  ---------------------------------- */
+@media (max-width: 600px) {
+
+  .twotext-container {
+    flex-direction: column;  /* Apila los elementos en lugar de alinearlos en fila */
+    gap: 5px;  /* Reduce el espacio entre los elementos */
+    position: absolute;  /* Para asegurar que no se solapen con la imagen */
+  }
+
+  .text-left, .text-right {
+    width: 100%;  /* Hace que los elementos ocupen todo el ancho disponible */
+  }
+
+  .twotext-container p {
+    font-size: large;  /* Reduce el tamaño del texto para pantallas más pequeñas */
+    line-height: 1.2;  /* Aumenta el espaciado entre líneas para mejor legibilidad */
+  }
+
+  .text-left h1{
+    line-height: 1;
+    margin-bottom: 10px;
+    font-size: x-large;
+  }
+
+  .text-left{
+    margin-bottom: 5px;
+  }
+
+  .button-register {
+    margin-right: 5px;  /* Elimina el margen en pantallas pequeñas */
+  }
+}
+
+/* --------------------  second tile -----------------------------------*/
+/* ---------------------- what we offer card ----------------------------------*/
+.dbimage-text-container {
+  position: absolute;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 70px;
+}
+
+.images-left-container, .text-right-container{
+  text-align: center; 
+}
+
+.db-image {
+  width: 140px; /* Ajusta el tamaño */
+  height: 150px; /* Mantiene el tamaño uniforme */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+  border-radius: 50%;
+  padding-right: 10px;
+}
+
+.graph-image{
+  width: 140px; /* Ajusta el tamaño */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+  border-radius: 20%;
+}
+
+.text-right-container p {
+  font-size: medium;
+  line-height: 1;
+}
+
+/* --------------- mobile ----------------------------------------------------*/
+@media (max-width: 540px) {
+
+  .dbimage-text-container {
+    flex-direction: column; /* Cambia a diseño de columna */
+    align-items: center; /* Centra los elementos */
+    width: 95%; /* Se ajusta al ancho del contenedor */
+  }
+
+  .images-left-container img{
+    width: 20px; /* Reduce el tamaño de las imágenes */
+    height: 20px; /* Asegura que sean proporcionales */
+  }
+
+  .images-left-container h3{
+    margin-bottom: 0%;
+    font-size: 24px;
+  }
+
+  .text-right-container h3{
+    margin-bottom: 0%;
+    font-size: 18px;
+  }
+
+  .text-right-container p {
+    font-size: 8px; /* Reduce el tamaño del texto */
+    text-align: center; /* Centra el texto */
+  }
+
+}
+
+/* --------------- ipad ----------------------------------------------------*/
+@media (max-width: 855px) {
+
+  .dbimage-text-container {
+    align-items: center; /* Centra los elementos */
+    position: static; /* Evita problemas con `absolute` en móviles */
+    gap: 20px;
+  }
+
+  .db-image, .graph-image {
+    width: 70px; /* Reduce el tamaño de las imágenes */
+    height: 70px; /* Asegura que sean proporcionales */
+  }
+
+  .text-right-container p {
+    font-size: 12px; /* Reduce el tamaño del texto */
+    line-height: 1;
+    margin: 0 auto; /* Centra el párrafo */
+  }
+
+  .dbimage-text-container h3{
+    font-size: larger;
+  }
+
+}
+
+/* ------------------------------- third tile --------------------------------*/
+.third-tile-container{
+  width: 95%;
+}
+
+.third-pharagrap, .third-title{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente (si tiene altura definida) */
+  text-align: center; /* Centra el texto dentro del párrafo */
+}
+
+.third-pharagrap p{
+  width: 100%;
+}
+
+/*  ------------------  mobile --------------------------------- */
+@media(max-width: 540px) {
+  .third-pharagrap p{
+    font-size: 6px;
+    line-height: 1;
+  }
+
+  .third-title h3{
+    font-size: 12px;
+    padding-bottom: none;
+  }
+}
+
+@media(max-width: 855px) {
+
+  .third-title h3{
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .third-pharagrap p{
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+}
+
+/*   ------------------------------  Slider ------------------------------------ */
+.custom-slider {
+  position: relative;
+  display: flex;
+  height: 100vh; /* h-screen */
+  align-items: center; /* items-center */
+  padding-bottom: 6rem; /* pb-24 para pantallas pequeñas */
+}
+
+@media (min-width: 768px) { /* Equivalente a md: */
+  .custom-slider {
+    padding-bottom: 8rem; /* md:pb-32 para pantallas medianas */
+  }
+}
