@@ -1,3 +1,8 @@
+.title-slider{
+    display: flex;
+    justify-content: center;
+}
+
 .custom-slide {
     display: flex;
     text-align: center;
@@ -26,4 +31,9 @@
     border-radius: 50%; /* Hace que la imagen sea circular */
 }
 
+@media ( max-width: 1090px ) {
+    .title-slider h3{
+        font-size: 20px;
+    }
+}
 

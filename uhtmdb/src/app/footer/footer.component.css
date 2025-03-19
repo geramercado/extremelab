@@ -39,23 +39,22 @@ a {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */
         flex-direction: column;
         width: 100%;      /* El footer ocupa todo el ancho */
-        height: 30%;
+        height: 40%;
         gap: 10px;  /* Reduce el espacio entre elementos */
 
     }
 
     .logos {
-        flex-direction: column;
         gap: 5px;
     }
 
     .ipn-image{
-        width: 30px;  /* Ajusta el ancho */
-        height: 50px; /* Mantiene la proporción */
+        width: 40px;  /* Ajusta el ancho */
+        height: 60px; /* Mantiene la proporción */
     }
     
     .ucsd-image{
-        width: 90px;  /* Ajusta el ancho */
+        width: 140px;  /* Ajusta el ancho */
         height: 60px; /* Mantiene la proporción */
     }
 
