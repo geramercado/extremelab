@@ -33,7 +33,13 @@
 
 @media ( max-width: 1090px ) {
     .title-slider h3{
-        font-size: 20px;
+        font-size: 38px;
+    }
+}
+
+@media ( max-width: 840px ) {
+    .title-slider h3{
+        font-size: 22px;
     }
 }
 
