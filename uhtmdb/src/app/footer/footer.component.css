@@ -39,7 +39,7 @@ a {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */
         flex-direction: column;
         width: 100%;      /* El footer ocupa todo el ancho */
-        height: 40%;
+        height: 50%;
         gap: 10px;  /* Reduce el espacio entre elementos */
 
     }
