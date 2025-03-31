@@ -203,17 +203,4 @@
 
 }
 
-/*   ------------------------------  Slider ------------------------------------ */
-.custom-slider {
-  position: relative;
-  display: flex;
-  height: 100vh; /* h-screen */
-  align-items: center; /* items-center */
-  padding-bottom: 6rem; /* pb-24 para pantallas pequeñas */
-}
 
-@media (min-width: 768px) { /* Equivalente a md: */
-  .custom-slider {
-    padding-bottom: 8rem; /* md:pb-32 para pantallas medianas */
-  }
-}

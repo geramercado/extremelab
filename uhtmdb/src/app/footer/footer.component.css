@@ -1,15 +1,14 @@
 .footer {
+    display: flex;    /* Utiliza Flexbox para alinear los elementos */
     bottom: 0;        /* Asegura que esté pegado al fondo de la página */
     width: 100%;      /* El footer ocupa todo el ancho */
     height: 20%;
-    display: flex;    /* Utiliza Flexbox para alinear los elementos */
     align-items: center; /* Centra los elementos verticalmente */
     justify-content: center; /* Centra elementos horizontalmente*/
     padding: 10px;    /* Espaciado interno */
-    font-size: 14px;  /* Tamaño de la fuente */
     background-color: #295da6ff; /* Un fondo oscuro para el footer, puedes cambiarlo */
     color: white;     /* Color de la fuente */
-    gap: 50px;
+    gap: 100px;
 }
 
 .ipn-image{
@@ -28,38 +27,169 @@ span {
 
 a {
     color: white;     /* Color blanco para los enlaces */
-    margin: 0 10px;   /* Espaciado entre los enlaces */
+    margin: 0%;   /* Espaciado entre los enlaces */
     text-decoration: none;  /* Elimina el subrayado */
     font-size: x-large;
 }
 
-@media ( max-width: 1090px ) {  /* TABLET y móviles */
+@media ( max-width: 1230px ) {  /* ------  tablet   ------  */
 
     .footer {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */
-        flex-direction: column;
-        width: 100%;      /* El footer ocupa todo el ancho */
-        height: 50%;
-        gap: 10px;  /* Reduce el espacio entre elementos */
-
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra elementos horizontalmente*/
+        height: 10%;
+        font-size: 14px;  /* Tamaño de la fuente */
+        gap: 70px;
+    }
+    
+    .ipn-image{
+        width: 50px;  /* Ajusta el ancho */
+        height: 70px; /* Mantiene la proporción */
+    }
+    
+    .ucsd-image{
+        width: 180px;  /* Ajusta el ancho */
+        height: 70px; /* Mantiene la proporción */
+    }
+    
+    span {
+        font-size: x-large;
+    }
+    
+    a {
+        text-decoration: none;  /* Elimina el subrayado */
+        font-size: x-large;
+        margin: 0%;
     }
 
-    .logos {
-        gap: 5px;
-    }
+}
 
+@media ( max-width: 1023px ) {  /* ------  tablet   ------  */
+
+    .footer {
+        display: flex;    /* Utiliza Flexbox para alinear los elementos */
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra elementos horizontalmente*/
+        gap: 60px;
+    }
+    
     .ipn-image{
         width: 40px;  /* Ajusta el ancho */
         height: 60px; /* Mantiene la proporción */
     }
     
     .ucsd-image{
-        width: 140px;  /* Ajusta el ancho */
+        width: 170px;  /* Ajusta el ancho */
         height: 60px; /* Mantiene la proporción */
     }
-
-    span, a {
-        font-size: 1rem; /* Reduce el tamaño de fuente */
+    
+    span {
+        font-size: large;
     }
+    
+    a {
+        text-decoration: none;  /* Elimina el subrayado */
+        font-size: large;
+        margin: 0%;
+    }
+
 }
 
+@media ( max-width: 810px ) {  /* ------  tablet   ------  */
+
+    .footer {
+        display: flex;    /* Utiliza Flexbox para alinear los elementos */
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra elementos horizontalmente*/
+        gap: 40px;
+    }
+    
+    .ipn-image{
+        width: 35px;  /* Ajusta el ancho */
+        height: 50px; /* Mantiene la proporción */
+    }
+    
+    .ucsd-image{
+        width: 100px;  /* Ajusta el ancho */
+        height: 40px; /* Mantiene la proporción */
+    }
+    
+    span {
+        font-size: medium;
+    }
+    
+    a {
+        text-decoration: none;  /* Elimina el subrayado */
+        font-size: medium;
+        margin: 0%;
+    }
+
+}
+
+@media ( max-width: 640px ) {  /* ------  tablet   ------  */
+
+    .footer {
+        display: flex;    /* Utiliza Flexbox para alinear los elementos */
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra elementos horizontalmente*/
+        gap: 30px;
+    }
+    
+    .ipn-image{
+        width: 20px;  /* Ajusta el ancho */
+        height: 30px; /* Mantiene la proporción */
+    }
+    
+    .ucsd-image{
+        width: 90px;  /* Ajusta el ancho */
+        height: 30px; /* Mantiene la proporción */
+    }
+    
+    span {
+        font-size: small;
+    }
+    
+    a {
+        text-decoration: none;  /* Elimina el subrayado */
+        font-size: small;
+        margin: 0%;
+    }
+
+}
+
+@media ( max-width: 540px ) {  /* ------  tablet   ------  */
+
+    .footer {
+        display: flex;    /* Utiliza Flexbox para alinear los elementos */
+        width: 100%;      /* El footer ocupa todo el ancho */
+        height: 30%;
+        flex-direction: column;
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra elementos horizontalmente*/
+        gap: 10px;
+    }
+    
+    .ipn-image{
+        width: 40px;  /* Ajusta el ancho */
+        height: 50px; /* Mantiene la proporción */
+    }
+    
+    .ucsd-image{
+        width: 110px;  /* Ajusta el ancho */
+        height: 50px; /* Mantiene la proporción */
+    }
+    
+    span {
+        font-size: medium;
+    }
+    
+    a {
+        text-decoration: none;  /* Elimina el subrayado */
+        font-size: medium;
+        margin: 0%;
+    }
+
+}
+
+  
