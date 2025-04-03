@@ -11,6 +11,11 @@
     gap: 100px;
 }
 
+.logos {
+    display: flex;
+    gap: 70px;
+}
+
 .ipn-image{
     width: 50px;  /* Ajusta el ancho */
     height: 70px; /* Mantiene la proporción */
@@ -40,6 +45,11 @@ a {
         justify-content: center; /* Centra elementos horizontalmente*/
         height: 10%;
         font-size: 14px;  /* Tamaño de la fuente */
+        gap: 70px;
+    }
+
+    .logos {
+        display: flex;
         gap: 70px;
     }
     
@@ -73,6 +83,11 @@ a {
         justify-content: center; /* Centra elementos horizontalmente*/
         gap: 60px;
     }
+
+    .logos {
+        display: flex;
+        gap: 60px;
+    }
     
     .ipn-image{
         width: 40px;  /* Ajusta el ancho */
@@ -104,9 +119,16 @@ a {
         justify-content: center; /* Centra elementos horizontalmente*/
         gap: 40px;
     }
+
+    .logos {
+        display: flex;
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra elementos horizontalmente*/
+        gap: 40px;
+    }
     
     .ipn-image{
-        width: 35px;  /* Ajusta el ancho */
+        width: 30px;  /* Ajusta el ancho */
         height: 50px; /* Mantiene la proporción */
     }
     
@@ -133,6 +155,11 @@ a {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */
         align-items: center; /* Centra los elementos verticalmente */
         justify-content: center; /* Centra elementos horizontalmente*/
+        gap: 30px;
+    }
+
+    .logos {
+        display: flex;
         gap: 30px;
     }
     
@@ -162,11 +189,17 @@ a {
 
     .footer {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */
+        width: 100%;      /* El footer ocupa todo el ancho */
         height: 25%;
         flex-direction: column;
         align-items: center; /* Centra los elementos verticalmente */
         justify-content: center; /* Centra elementos horizontalmente*/
         gap: 10px;
+    }
+
+    .logos {
+        display: flex;
+        gap: 30px;
     }
     
     .ipn-image{
@@ -175,8 +208,8 @@ a {
     }
     
     .ucsd-image{
-        width: 125px;  /* Ajusta el ancho */
-        height: 45px; /* Mantiene la proporción */
+        width: 115px;  /* Ajusta el ancho */
+        height: 50px; /* Mantiene la proporción */
     }
     
     span {
@@ -190,4 +223,3 @@ a {
     }
 
 }
-
