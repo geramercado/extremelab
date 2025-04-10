@@ -1,10 +1,21 @@
-.floating-button {
+.fixed-button {
     position: fixed;
-    right: 5vw; /* 5% del ancho de la pantalla */
-    top: 75vh;  /* 50% de la altura de la pantalla */
-    z-index: 5;
-}
+    right: 5vw;
+    top: 50vh;
+    z-index: 50;
+    background-color: transparent; /* Fondo transparente */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .fixed-button img {
+    width: 100%; /* Ajusta la imagen al tamaño del botón */
+    height: 100%;
+    object-fit: contain; /* Mantiene la proporción */
+    border-radius: 50%;
+    margin-top: 3px;
+  }
+  
+  
 
-.health-icon {
-    color:rgb(2, 36, 109);
-}
