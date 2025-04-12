@@ -1,6 +1,6 @@
 <mat-grid-list cols="1" rowHeight="500px">
     <mat-grid-tile class="tile-one">
-        <img src="/dalle.jpg" alt="">
+        <img [src]="themeService.currentImage" alt="">
         <div class="twotext-container">
             <div class="text-left">
                 <h1>The Ultra-High<br>Temperature<br>Materials Database</h1>
@@ -21,8 +21,8 @@
         <div class="dbimage-text-container">
             <div class="images-left-container">
                 <h3>What we offer?</h3>
-                <img  src="db.jpg" alt="" class="db-image">
-                <img  src="analytic.jpg" alt="" class="graph-image">
+                <img  src="db.jpg"  class="db-image" alt="">
+                <img  src="analytic.jpg"  class="graph-image" alt="">
             </div>
             <div class="text-right-container">
                 <h3 class="card-subtitle">Our reliability</h3>

@@ -1,29 +1,30 @@
 <mat-sidenav-container class="sidenav-container">
 
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+  <mat-sidenav #drawer [ngClass]="['sidenav', themeService.themeSignal() ]" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="false">
-    <mat-toolbar class="title-sidetoolbar"><mat-icon>fireplace</mat-icon>UHTDB</mat-toolbar>
+    <mat-toolbar [ngClass]="['title-sidetoolbar', themeService.themeSignal() ]"><mat-icon>fireplace</mat-icon>UHTDB</mat-toolbar>
     <mat-nav-list class="buttons-sidebar">
       <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+  <mat-sidenav-content class="sidenav-container">
 
-    <mat-toolbar class="mattoolbar-navigationbar">
+    <mat-toolbar [ngClass]="['mattoolbar-navigationbar', themeService.themeSignal() ]">
       @if (isHandset$ | async) {
         <button
+          class="sidenav-toggle-icon"
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
           (click)="drawer.toggle()">
-          <mat-icon aria-label="Side nav toggle icon" style="color: #4574b5ff;">menu</mat-icon>
+          <mat-icon class="menu-icon" aria-label="sidenav toggle icon" style="color: #4574b5ff;">menu</mat-icon>
         </button>
       }
       <span class="toolbar-title">
-        <mat-icon>fireplace</mat-icon>
+        <mat-icon class="fire-icon">fireplace</mat-icon>
         The ultra-high temperature database
       </span>
       <span class="spacer"></span>
@@ -40,22 +41,33 @@
 </mat-sidenav-container>
 
 <ng-template #buttonsTemplate class="template-buttons">
-  <button mat-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" style="color: #4574b5ff;">Resources
-    <mat-icon [class.rotate]="menuTrigger.menuOpen">expand_more</mat-icon>
-  </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item style="color: #4574b5ff;">resource 1</button>
-      <button mat-menu-item style="color: #4574b5ff;">resource 2</button>
-    </mat-menu>
-  <button mat-button [matMenuTriggerFor]="menu2" #menuTrigger2="matMenuTrigger" style="color: #4574b5ff;">About
-    <mat-icon [class.rotate]="menuTrigger2.menuOpen">expand_more</mat-icon>
-  </button>
-    <mat-menu #menu2="matMenu">
-      <button mat-menu-item style="color: #4574b5ff;">about 1</button>
-      <button mat-menu-item style="color: #4574b5ff;">about 2</button>
-    </mat-menu>
-  <button mat-button style="color: #4574b5ff;">API</button>
-  <button mat-button style="color: #4574b5ff;">Login</button>
-  <button mat-button style="color: #4574b5ff;"><mat-icon>translate</mat-icon></button>
-  <button mat-button style="color: #4574b5ff;"><mat-icon>light_mode</mat-icon></button>
+  
+    <button mat-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" style="color: #4574b5ff;">Resources
+      <mat-icon [class.rotate]="menuTrigger.menuOpen">expand_more</mat-icon>
+    </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item style="color: #4574b5ff;">resource 1</button>
+        <button mat-menu-item style="color: #4574b5ff;">resource 2</button>
+      </mat-menu>
+    <button mat-button [matMenuTriggerFor]="menu2" #menuTrigger2="matMenuTrigger" style="color: #4574b5ff;">About
+      <mat-icon [class.rotate]="menuTrigger2.menuOpen">expand_more</mat-icon>
+    </button>
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item style="color: #4574b5ff;">about 1</button>
+        <button mat-menu-item style="color: #4574b5ff;">about 2</button>
+      </mat-menu>
+    <button mat-button style="color: #4574b5ff;">API</button>
+    <button mat-button style="color: #4574b5ff;">Login</button>
+    <button mat-button style="color: #4574b5ff;" title="translate"><mat-icon>translate</mat-icon></button>  
+
+  @if (themeService.themeSignal() === 'light') {
+    <button (click)="toggleTheme()"  mat-button style="color: #4574b5ff;" title="light">
+      <mat-icon>light_mode</mat-icon>
+    </button>
+  } @else {
+    <button (click)="toggleTheme()" mat-button style="color: #4574b5ff;" title="dark">
+      <mat-icon>dark_mode</mat-icon>
+    </button>
+  }
+
 </ng-template>

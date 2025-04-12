@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$brown-color: #211b00ff !important;
+$white-color: #ffffff !important;
+$blue-light-color: #d6e3ff !important;
+$blue-color: #4574b5ff !important;
+$blue-dark-color: #00468cff !important;
+
+.dark {
+    background-color: $blue-dark-color;
+    color: $white-color;
+
+    button {
+
+        color: $white-color;
+    
+        &:hover {
+          background-color: #555;
+        }
+    }
+
+}
+

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { AsyncPipe, CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule, NgClass } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -11,6 +11,9 @@ import { map, shareReplay } from 'rxjs/operators';
 import { MatMenuModule } from '@angular/material/menu';
 
 import { BodyComponent } from '../body/body.component';
+
+import { ThemeService } from '../services/theme.service';
+
 
 
 @Component({
@@ -32,6 +35,12 @@ import { BodyComponent } from '../body/body.component';
 })
 export class NavigationBarComponent {
 
+  themeService: ThemeService = inject(ThemeService);
+
+  toggleTheme(){
+    this.themeService.updateTheme();
+  }
+
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -40,4 +49,6 @@ export class NavigationBarComponent {
       shareReplay()
     );
 
+
 }
+

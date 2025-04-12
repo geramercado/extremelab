@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -6,6 +6,8 @@ import { MatCardModule } from '@angular/material/card';
 import { SliderComponent } from '../slider/slider.component';
 import { register } from 'swiper/element/bundle'; 
 register();
+
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-body',
@@ -21,4 +23,6 @@ register();
 })
 export class BodyComponent {
 
+  themeService: ThemeService = inject(ThemeService);
+  
 }
