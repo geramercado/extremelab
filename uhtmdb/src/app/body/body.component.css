@@ -8,6 +8,7 @@
 .twotext-container {
   position: absolute;
   display: flex;
+  width: 1100px;
   gap: 50px;
 }
 
@@ -26,19 +27,23 @@
   background-color: #ffdea6ff !important;
   color: #7a5800ff !important;
   margin-right: 20px;
-  z-index: 0; /* Ajusta el valor según sea necesario */
   position: relative; /* Asegura que el z-index se aplique correctamente */
+  width: 200px;
+  height: 50px;
+  font-size: larger;
 }
 
 .button-login {
-  z-index: 0; /* Ajusta el valor según sea necesario */
   position: relative; /* Asegura que el z-index se aplique correctamente */
   background-color: #d6e3ffff !important;
   color: #295da6ff !important;
+  width: 200px;
+  height: 50px;
+  font-size: larger;
 }
 
 /* -------------------------------  mobile  ---------------------------------- */
-@media (max-width: 600px) {
+@media (max-width: 1050px) {
 
   .twotext-container {
     flex-direction: column;  /* Apila los elementos en lugar de alinearlos en fila */
@@ -66,8 +71,37 @@
   }
 
   .button-register {
-    margin-right: 5px;  /* Elimina el margen en pantallas pequeñas */
+    width: 150px;
+    height: 30px;
+    font-size: medium;
   }
+
+  .button-login {
+    width: 150px;
+    height: 30px;
+    font-size: medium;
+  }
+
+}
+
+@media (max-width: 750px) {
+
+  .text-left p{
+    font-size: medium;
+  }
+
+  .button-register {
+    width: 120px;
+    height: 30px;
+    font-size: small;
+  }
+
+  .button-login {
+    width: 120px;
+    height: 30px;
+    font-size: small;
+  }
+
 }
 
 /* --------------------  second tile -----------------------------------*/

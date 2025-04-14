@@ -20,7 +20,7 @@
           aria-label="Toggle sidenav"
           mat-icon-button
           (click)="drawer.toggle()">
-          <mat-icon class="menu-icon" aria-label="sidenav toggle icon" style="color: #4574b5ff;">menu</mat-icon>
+          <mat-icon [ngClass]="['menu-icon', themeService.themeSignal() ]" aria-label="sidenav toggle icon" style="color: #4574b5ff;">menu</mat-icon>
         </button>
       }
       <span class="toolbar-title">
