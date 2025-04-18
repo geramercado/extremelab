@@ -1,3 +1,27 @@
+<mat-toolbar [ngClass]="['mattoolbar-navigationbar', themeService.themeSignal() ]">
+  @if (isHandset$ | async) {
+    <button
+      class="sidenav-toggle-icon"
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="drawer.toggle()">
+      <mat-icon [ngClass]="['menu-icon', themeService.themeSignal() ]" aria-label="sidenav toggle icon" style="color: #4574b5ff;">menu</mat-icon>
+    </button>
+  }
+    <span class="toolbar-title">
+      <mat-icon class="fire-icon">fireplace</mat-icon>
+      <a routerLink="main-page" style="text-decoration: none;" [ngClass]="[ themeService.themeSignal() ]">The ultra-high temperature database</a>
+    </span>
+      
+      <span class="spacer"></span>
+        <!-- buttons -->
+        <div class="buttons hide-on-mobile">
+          <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
+        </div>
+</mat-toolbar>
+
+
 <mat-sidenav-container class="sidenav-container">
 
   <mat-sidenav #drawer [ngClass]="['sidenav', themeService.themeSignal() ]" fixedInViewport
@@ -7,38 +31,12 @@
     <mat-toolbar [ngClass]="['title-sidetoolbar', themeService.themeSignal() ]"><mat-icon>fireplace</mat-icon>UHTDB</mat-toolbar>
     <mat-nav-list class="buttons-sidebar">
       <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
+      <button mat-button style="color: #4574b5ff;" (click)="drawer.close()">Cerrar</button>
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content class="sidenav-container">
-
-    <mat-toolbar [ngClass]="['mattoolbar-navigationbar', themeService.themeSignal() ]">
-      @if (isHandset$ | async) {
-        <button
-          class="sidenav-toggle-icon"
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()">
-          <mat-icon [ngClass]="['menu-icon', themeService.themeSignal() ]" aria-label="sidenav toggle icon" style="color: #4574b5ff;">menu</mat-icon>
-        </button>
-      }
-      <span class="toolbar-title">
-        <mat-icon class="fire-icon">fireplace</mat-icon>
-        The ultra-high temperature database
-      </span>
-      <span class="spacer"></span>
-      <!-- buttons -->
-      <div class="buttons hide-on-mobile">
-        <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
-      </div>
-    </mat-toolbar>
-
-    <!-- conten -->
-     <app-body></app-body>
-  </mat-sidenav-content>
-
 </mat-sidenav-container>
+
 
 <ng-template #buttonsTemplate class="template-buttons">
   
@@ -57,7 +55,7 @@
         <button mat-menu-item style="color: #4574b5ff;">about 2</button>
       </mat-menu>
     <button mat-button style="color: #4574b5ff;">API</button>
-    <button mat-button style="color: #4574b5ff;">Login</button>
+    <button mat-button style="color: #4574b5ff;"  routerLink="filters" >Login</button>
     <button mat-button style="color: #4574b5ff;" title="translate"><mat-icon>translate</mat-icon></button>  
 
   @if (themeService.themeSignal() === 'light') {
@@ -71,3 +69,5 @@
   }
 
 </ng-template>
+
+

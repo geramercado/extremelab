@@ -1,8 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+
+import { RouterOutlet } from '@angular/router';
+
+import { NavigationBarComponent } from './mainPage/navigation-bar/navigation-bar.component';
 
 
 
@@ -12,9 +15,10 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'app-root',
   standalone: true,
   imports: [ 
-    NavigationBarComponent,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterOutlet,
+    NavigationBarComponent
    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

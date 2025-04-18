@@ -10,9 +10,9 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatMenuModule } from '@angular/material/menu';
 
-import { BodyComponent } from '../body/body.component';
+import { ThemeService } from '../../services/theme.service';
+import { RouterLink } from '@angular/router';
 
-import { ThemeService } from '../services/theme.service';
 
 
 
@@ -30,7 +30,7 @@ import { ThemeService } from '../services/theme.service';
     AsyncPipe,
     MatMenuModule,
     CommonModule,
-    BodyComponent
+    RouterLink
   ]
 })
 export class NavigationBarComponent {

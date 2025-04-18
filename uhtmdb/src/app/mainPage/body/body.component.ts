@@ -7,7 +7,7 @@ import { SliderComponent } from '../slider/slider.component';
 import { register } from 'swiper/element/bundle'; 
 register();
 
-import { ThemeService } from '../services/theme.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-body',
