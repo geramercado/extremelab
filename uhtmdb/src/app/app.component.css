@@ -7,17 +7,15 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-  }
+}
   
-  .fixed-button img {
+.fixed-button img {
     width: 100%; /* Ajusta la imagen al tamaño del botón */
     height: 100%;
     object-fit: contain; /* Mantiene la proporción */
     border-radius: 50%;
     margin-top: 3px;
-  }
-
-  
+}
 
   
 

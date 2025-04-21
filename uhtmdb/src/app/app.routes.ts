@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { BodyComponent } from './mainPage/body/body.component';
-import { FiltersComponent } from './filters/filters.component';
+import { InputsComponent } from './filters/inputs/inputs.component';
 
 
 export const routes: Routes = [
@@ -13,7 +13,7 @@ export const routes: Routes = [
 
     {
         path:'filters',
-        component: FiltersComponent
+        component: InputsComponent
     }
 
 ];
