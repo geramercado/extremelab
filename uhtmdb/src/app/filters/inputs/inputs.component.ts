@@ -4,6 +4,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 
 
 import { FooterComponent } from '../../mainPage/footer/footer.component';
@@ -17,7 +19,9 @@ import { FooterComponent } from '../../mainPage/footer/footer.component';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatSelectModule
 ],
   templateUrl: './inputs.component.html',
   styleUrl: './inputs.component.css'

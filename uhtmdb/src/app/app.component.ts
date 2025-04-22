@@ -8,9 +8,6 @@ import { RouterOutlet } from '@angular/router';
 import { NavigationBarComponent } from './mainPage/navigation-bar/navigation-bar.component';
 
 
-
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
