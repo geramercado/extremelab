@@ -9,6 +9,8 @@ import { MatSelectModule } from '@angular/material/select';
 
 
 import { FooterComponent } from '../../mainPage/footer/footer.component';
+import { ButtonsComponent } from '../buttons/buttons.component';
+import { TablesComponent } from '../tables/tables.component';
 
 
 @Component({
@@ -21,7 +23,9 @@ import { FooterComponent } from '../../mainPage/footer/footer.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    ButtonsComponent,
+    TablesComponent
 ],
   templateUrl: './inputs.component.html',
   styleUrl: './inputs.component.css'

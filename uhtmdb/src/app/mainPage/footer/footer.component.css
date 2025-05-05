@@ -2,39 +2,41 @@
     display: flex;    /* Utiliza Flexbox para alinear los elementos */
     bottom: 0;        /* Asegura que esté pegado al fondo de la página */
     width: 100%;      /* El footer ocupa todo el ancho */
-    height: 20%;
+    height: 25%;
     align-items: center; /* Centra los elementos verticalmente */
     justify-content: center; /* Centra elementos horizontalmente*/
     padding: 10px;    /* Espaciado interno */
     background-color: #295da6ff; /* Un fondo oscuro para el footer, puedes cambiarlo */
     color: white;     /* Color de la fuente */
-    gap: 100px;
+    gap: 150px;
 }
 
 .logos {
     display: flex;
-    gap: 70px;
+    gap: 90px;
+    align-items: center;
+    justify-content: center;
 }
 
 .ipn-image{
-    width: 50px;  /* Ajusta el ancho */
-    height: 70px; /* Mantiene la proporción */
+    width: 80px;  /* Ajusta el ancho */
+    height: 110px; /* Mantiene la proporción */
 }
 
 .ucsd-image{
-    width: 180px;  /* Ajusta el ancho */
-    height: 70px; /* Mantiene la proporción */
+    width: 320px;  /* Ajusta el ancho */
+    height: 140px; /* Mantiene la proporción */
 }
 
 span {
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 a {
     color: white;     /* Color blanco para los enlaces */
     margin: 0%;   /* Espaciado entre los enlaces */
     text-decoration: none;  /* Elimina el subrayado */
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 @media ( max-width: 1230px ) {  /* ------  tablet   ------  */
@@ -75,7 +77,7 @@ a {
 
 }
 
-@media ( max-width: 1023px ) {  /* ------  tablet   ------  */
+@media ( max-width: 1024px ) {  /* ------  tablet   ------  */
 
     .footer {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */
@@ -111,7 +113,7 @@ a {
 
 }
 
-@media ( max-width: 810px ) {  /* ------  tablet   ------  */
+@media ( max-width: 912px ) {  /* ------  tablet   ------  */
 
     .footer {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */
