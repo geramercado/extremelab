@@ -39,6 +39,44 @@ a {
     font-size: xx-large;
 }
 
+@media ( max-width: 1380px ) {  /* ------  tablet   ------  */
+
+    .footer {
+        display: flex;    /* Utiliza Flexbox para alinear los elementos */
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra elementos horizontalmente*/
+        height: 15%;
+        font-size: 14px;  /* Tamaño de la fuente */
+        gap: 70px;
+    }
+
+    .logos {
+        display: flex;
+        gap: 70px;
+    }
+    
+    .ipn-image{
+        width: 50px;  /* Ajusta el ancho */
+        height: 70px; /* Mantiene la proporción */
+    }
+    
+    .ucsd-image{
+        width: 180px;  /* Ajusta el ancho */
+        height: 70px; /* Mantiene la proporción */
+    }
+    
+    span {
+        font-size: x-large;
+    }
+    
+    a {
+        text-decoration: none;  /* Elimina el subrayado */
+        font-size: x-large;
+        margin: 0%;
+    }
+
+}
+
 @media ( max-width: 1280px ) {  /* ------  tablet   ------  */
 
     .footer {
