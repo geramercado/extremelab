@@ -27,11 +27,29 @@
     background-color: white;
     margin-top: 6px;
 }
-  
+
+.periodic-table-button:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
   
 .periodic-table-button img {
     height: 86%;
     width: 86%;
 }
 
+.input-delete-icon{
+    color: red;
+}
+
+.input-button-delete{
+    box-shadow: none;
+    background-color: white;
+}
+
+/* between 821 and 1025*/
+@media (min-width: 821px) and (max-width: 1025px) {
+    .input-container {
+        width: 724px;
+    }
+}
 

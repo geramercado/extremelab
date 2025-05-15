@@ -16,7 +16,7 @@ import { ThemeService } from '../../services/theme.service';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
-    SliderComponent,
+    SliderComponent
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'

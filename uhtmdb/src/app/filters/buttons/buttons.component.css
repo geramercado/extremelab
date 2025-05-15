@@ -54,12 +54,17 @@
     color: red;
 }
 
-/*
-@media (max-width: 450px) {
-
-    .body-buttons{
-        width: 70%;
-    }
-
+.clear-container{
+    flex: 0 0 auto;
+    width: 33.33%;
 }
-*/
+
+@media (max-width: 600px) {
+
+    .clear-container{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+

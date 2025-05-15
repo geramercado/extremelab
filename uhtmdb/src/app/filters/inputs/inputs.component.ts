@@ -11,6 +11,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FooterComponent } from '../../mainPage/footer/footer.component';
 import { ButtonsComponent } from '../buttons/buttons.component';
 import { TablesComponent } from '../tables/tables.component';
+import { CardsButtonComponent } from '../cards-button/cards-button.component';
 
 
 @Component({
@@ -25,7 +26,8 @@ import { TablesComponent } from '../tables/tables.component';
     MatButtonModule,
     MatSelectModule,
     ButtonsComponent,
-    TablesComponent
+    TablesComponent,
+    CardsButtonComponent
 ],
   templateUrl: './inputs.component.html',
   styleUrl: './inputs.component.css'

@@ -1,0 +1,76 @@
+.body-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.login-container{
+    width: 90%;
+    height: 1000px;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.col{
+    padding: 0%;
+    margin: 0%;
+}
+
+.col-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    height: 630px;
+    padding: 25px;
+    border: 1px solid grey;
+    border-radius: 3%;
+    box-shadow: -5px 1px 15px rgb(190, 190, 190);
+}
+
+.col-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-submit{
+    margin-top: 10px;
+    width: 300px;
+    background-color: #295da6ff;
+    color: white;
+}
+
+.forgot-pass{
+    margin-top: 15px;
+}
+
+.forgot-pass a{
+    text-decoration: none;
+    color: #295da6ff;
+}
+
+.btn-google, .btn-microsoft {
+    margin-top: 10px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.btn-account{
+    margin-top: 10px;
+    width: 300px;
+    background-color: #7a5800ff;
+    color: rgb(255, 255, 255);
+}
+
+
