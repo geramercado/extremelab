@@ -9,6 +9,8 @@ register();
 
 import { ThemeService } from '../../services/theme.service';
 
+import { RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-body',
   standalone: true,
@@ -16,7 +18,8 @@ import { ThemeService } from '../../services/theme.service';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
-    SliderComponent
+    SliderComponent,
+    RouterLink
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'

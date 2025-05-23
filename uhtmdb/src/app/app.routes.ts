@@ -13,13 +13,17 @@ export const routes: Routes = [
     },
 
     {
-        path:'filters',
-        component: InputsComponent
-    },
-
-    {
+    
         path:'login',
-        component: LoginComponent
+        component:LoginComponent,
+        children:[
+           
+            {
+                path:'filters',
+                component:InputsComponent
+            }
+        ]
+    
     },
 
     {
