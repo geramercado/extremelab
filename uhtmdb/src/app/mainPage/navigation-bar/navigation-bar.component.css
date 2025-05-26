@@ -58,7 +58,6 @@ mat-icon {
   flex: 1; /* Empuja los elementos a la derecha */
 }
 
-/* Ocultar los botones cuando el ancho de la pantalla sea menor a 768px */
 @media (max-width: 540px) {
   .hide-on-mobile {
     display: none;

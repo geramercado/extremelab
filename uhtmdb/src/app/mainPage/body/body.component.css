@@ -42,7 +42,6 @@
   font-size: larger;
 }
 
-/* -------------------------------  mobile  ---------------------------------- */
 @media (max-width: 1050px) {
 
   .twotext-container {

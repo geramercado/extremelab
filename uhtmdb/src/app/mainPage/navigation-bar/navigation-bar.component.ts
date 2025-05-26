@@ -13,9 +13,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ThemeService } from '../../services/theme.service';
 import { RouterLink } from '@angular/router';
 
-
-
-
 @Component({
   selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
@@ -33,6 +30,7 @@ import { RouterLink } from '@angular/router';
     RouterLink
   ]
 })
+
 export class NavigationBarComponent {
 
   themeService: ThemeService = inject(ThemeService);
@@ -48,7 +46,6 @@ export class NavigationBarComponent {
       map(result => result.matches),
       shareReplay()
     );
-
 
 }
 
