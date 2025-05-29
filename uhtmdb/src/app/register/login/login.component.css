@@ -66,6 +66,18 @@
     color: rgb(0, 0, 0);
 }
 
+.icon-google  {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+}
+
+.icon-windows{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
 .btn-account{
     margin-top: 10px;
     width: 300px;
