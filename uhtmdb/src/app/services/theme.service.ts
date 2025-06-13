@@ -20,5 +20,6 @@ export class ThemeService {
     return this.themeSignal() === 'dark' ? 'dalle_dark.jpg' : 'dalle.jpg';
   }
   
-
 }
+
+

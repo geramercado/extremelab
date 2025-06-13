@@ -6,7 +6,7 @@
     align-items: center; /* Centra los elementos verticalmente */
     justify-content: center; /* Centra elementos horizontalmente*/
     padding: 10px;    /* Espaciado interno */
-    background-color: #295da6ff; /* Un fondo oscuro para el footer, puedes cambiarlo */
+    background-color: #295da6ff; /* Un fondo oscuro para el footer */
     color: white;     /* Color de la fuente */
     gap: 150px;
 }
@@ -219,7 +219,7 @@ a {
 
 }
 
-@media ( max-width: 640px ) {  /* ------  tablet   ------  */
+@media ( max-width: 640px ) { 
 
     .footer {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */
@@ -255,7 +255,7 @@ a {
 
 }
 
-@media ( max-width: 540px ) {  /* ------  tablet   ------  */
+@media ( max-width: 540px ) {  
 
     .footer {
         display: flex;    /* Utiliza Flexbox para alinear los elementos */

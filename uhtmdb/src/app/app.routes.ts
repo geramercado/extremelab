@@ -15,14 +15,14 @@ export const routes: Routes = [
     {
     
         path:'login',
-        component:LoginComponent,
-        children:[
-           
-            {
-                path:'filters',
-                component:InputsComponent
-            }
-        ]
+        component:LoginComponent
+    
+    },
+
+    {
+    
+        path:'filters',
+        component:InputsComponent
     
     },
 
