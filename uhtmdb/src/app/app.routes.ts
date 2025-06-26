@@ -21,7 +21,7 @@ export const routes: Routes = [
 
     {
     
-        path:'filters',
+        path:'login/filters',
         component:InputsComponent
     
     },

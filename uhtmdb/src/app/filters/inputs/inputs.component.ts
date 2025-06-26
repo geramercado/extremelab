@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -30,8 +30,23 @@ import { CardsButtonComponent } from '../cards-button/cards-button.component';
     CardsButtonComponent
 ],
   templateUrl: './inputs.component.html',
-  styleUrl: './inputs.component.css'
+  styleUrl: './inputs.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class InputsComponent {
+/*
+  readonly dialog = inject(MatDialog);
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(DialogAnimationsExampleDialog, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
+  
+  */
 
 }
