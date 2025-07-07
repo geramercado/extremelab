@@ -13,6 +13,15 @@ import { ButtonsComponent } from '../buttons/buttons.component';
 import { TablesComponent } from '../tables/tables.component';
 import { CardsButtonComponent } from '../cards-button/cards-button.component';
 
+import {
+  MatDialog,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogRef,
+  MatDialogTitle,
+} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-inputs',
@@ -35,18 +44,32 @@ import { CardsButtonComponent } from '../cards-button/cards-button.component';
 })
 
 export class InputsComponent {
-/*
+
   readonly dialog = inject(MatDialog);
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(DialogAnimationsExampleDialog, {
-      width: '250px',
+    this.dialog.open(PeriodicTable, {
+      width: '90vw',
+      height: '90vh',
+      maxWidth: '100vw',
       enterAnimationDuration,
       exitAnimationDuration,
     });
   }
 
-  
-  */
-
 }
+
+@Component({
+  standalone: true,
+  selector: 'periodic-table',
+  templateUrl: 'periodic-table.html',
+  styleUrl: './periodic-table-style.css',
+  imports: [
+    MatButtonModule, MatDialogActions, MatDialogClose
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class PeriodicTable {
+  readonly dialogRef = inject(MatDialogRef<PeriodicTable>);
+}
+
