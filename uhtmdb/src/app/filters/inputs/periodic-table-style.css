@@ -59,38 +59,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* -------------------
 	Variables
 -------------------- */
+
 html {
-  min-height: 100%;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU1NTU1NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIyMjIyMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #555555), color-stop(100%, #222222));
-  background-image: -moz-linear-gradient(#555555, #222222);
-  background-image: -webkit-linear-gradient(#555555, #222222);
-  background-image: linear-gradient(#555555, #222222);
-  background-repeat: no-repeat;
+  background-color: white;
 }
  
 body {
   font-size: 100%;
   font-family: helvetica, arial, sans-serif;
+  height: 90%;
 }
  
 h1, h3 {
   font-family: 'Tauri', sans-serif;
   letter-spacing: -.05em;
-}
- 
-#wrapper h1 {
-  font-size: 2em;
-  margin-top: 0px;
-  color: #eee;
-  text-transform: uppercase;
-}
- 
-#wrapper h3 {
-  margin: 10px 0 20px 0;
-  color: #888;
-  font-weight: normal;
 }
  
 span.swatch {
@@ -119,8 +102,8 @@ span.swatch {
  
 #wrapper {
   width: 990px;
-  margin: 0 auto 30px auto;
-  height: 600px;
+  margin: 50px auto auto auto;
+  height: 400px;
   position: relative;
 }
  

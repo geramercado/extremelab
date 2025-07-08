@@ -49,9 +49,9 @@ export class InputsComponent {
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(PeriodicTable, {
-      width: '90vw',
-      height: '90vh',
-      maxWidth: '100vw',
+      width: '70vw',
+      height: '70vh',
+      maxWidth: '90vw',
       enterAnimationDuration,
       exitAnimationDuration,
     });
