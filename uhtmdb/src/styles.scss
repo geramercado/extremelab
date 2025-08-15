@@ -41,3 +41,9 @@ $blue-dark-color: #00468cff !important;
   ));
 }
 
+::ng-deep .mat-dialog-container {
+  border-radius: 0 !important; /* <-- Esto elimina las esquinas redondeadas */
+}
+
+
+

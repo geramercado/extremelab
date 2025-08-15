@@ -53,3 +53,10 @@
     }
 }
 
+/* Periodic table style component*/
+.full-dialog .mat-dialog-container {
+    padding: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+
