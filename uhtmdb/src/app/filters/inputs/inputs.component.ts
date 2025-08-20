@@ -24,7 +24,9 @@ import {
   MatDialogContent,
   MatDialogRef,
   MatDialogTitle,
-} from '@angular/material/dialog';
+} 
+from '@angular/material/dialog';
+import { MatGridListModule } from "@angular/material/grid-list";
 
 
 @Component({
@@ -53,14 +55,12 @@ export class InputsComponent {
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(PeriodicTable, {
-      width: '70vw',
-      height: '70vh',
-      maxWidth: '100vw',
-      panelClass: 'responsive-dialog',
+      panelClass: 'matdialog-conf',
       enterAnimationDuration,
       exitAnimationDuration,
     });
   }
+
 
 }
 
@@ -74,7 +74,9 @@ export class InputsComponent {
     CommonModule
     //MatDialogActions,
     //MatDialogClose
-  ],
+    ,
+    MatGridListModule
+],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 

@@ -14,11 +14,12 @@
 
 .periodic-table {
   display: grid;
+  grid-auto-rows: calc(3vw);
   grid-template-columns: repeat(18, 1fr);
   gap: 2px;
   padding: 5px;
-  background-color: #f5f5f5;
-  border-radius: 0; /* Esquinas cuadradas */
+  background-color: #f9f7fc;
+  border-radius: 0; 
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -30,15 +31,15 @@
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 600;
   background-color: #ffffff;
   border: 1px solid #ccc;
-  color: #212121;
+  color: #000000;
   cursor: pointer;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
   padding: 2px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Hover visual */
@@ -54,101 +55,139 @@
   border-color: #388e3c;
 }
 
-/* Responsive mode */
-/* Pantallas grandes (desktop) */
-@media (min-width: 1024px) {
-  .periodic-table {
-    grid-auto-rows: calc(2.8vw);
-  }
-  .element {
-    font-size: 0.9em;
-  }
-}
 
-/* Pantallas medianas (tablets) */
-@media (max-width: 1023px) and (min-width: 600px) {
-  .periodic-table {
-    grid-auto-rows: calc(4vw);
-  }
+@media (max-width: 1023px) {
+
   .element {
     font-size: 0.8em;
+    padding: 0px;
   }
+
 }
 
-/* Pantallas pequeñas (celulares) */
+
+/* Pantallas pequeñas, estilo botones periodic table */
 @media (max-width: 599px) {
 
-  .body-table{
-    height: 50%;
-  }
-
-  .responsive-dialog {
-    width: 90vw !important;
-    height: 70vw !important;
-  }
-
   .periodic-table {
-    grid-auto-rows: calc(5vw);
-    grid-template-columns: repeat(18, minmax(14px, 1fr));
+    grid-auto-rows: calc(5.2vw);
+    grid-template-columns: repeat(18, minmax(14.5px, 1fr));
   }
   .element {
-    font-size: 0.4em;
+    font-size: 0.5em;
     padding: 0px;
   }
 }
 
+/* Color elements*/
 
-/* CATEGORÍAS DE ELEMENTOS */
 .nonmetal {
-  background-color: #81d4fa; /* Azul claro */
+  background-color: #abcacc; 
 }
 
 .noble-gas {
-  background-color: #ffd54f; /* Amarillo dorado */
+  background-color: #d2c0ed; 
 }
 
 .alkali-metal {
-  background-color: #ef9a9a; /* Rojo rosado */
+  background-color: #8d9e47; 
 }
 
 .alkaline-earth-metal {
-  background-color: #a5d6a7; /* Verde suave */
+  background-color: #d9e366; 
 }
 
 .transition-metal {
-  background-color: #ce93d8; /* Lila suave */
+  background-color: #edff91; 
 }
 
 .lanthanoid {
-  background-color: #b39ddb; /* Lila más oscuro */
+  background-color: #b39ddb; 
 }
 
 .actinoid {
-  background-color: #90caf9; /* Azul cielo */
+  background-color: #90caf9; 
 }
 
 .metalloid {
-  background-color: #ffcc80; /* Naranja suave */
+  background-color: #8fc2a4; 
 }
 
 .post-transition-metal {
-  background-color: #bcaaa4; /* Gris cálido */
+  background-color: #bcaaa4; 
 }
 
 .halogen {
-  background-color: #ffab91; /* Naranja claro */
+  background-color: #7a959e; 
 }
 
 .lanthanide {
-  background-color: #bb2525; /* Gris neutro */
+  background-color: #e8a87d; 
 }
 
 .actinide {
-  background-color: #66e74c; /* Gris neutro */
+  background-color: #eb6e60;
 }
 
 .unknown {
-  background-color: #2572bb; /* Gris neutro */
+  background-color: #c7c7c7; 
 }
+
+/* Full Screen*/
+.button-accept-cancel {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  gap: 10px;               /* espacio entre botones */
+}
+
+.btns-custom {
+  background-color: #f9f7fc; 
+  color: #000000 ;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  box-shadow: none;
+  width: 80px;
+  height: 50px; 
+}
+
+.btns-accept{
+  color: #295da6;
+}
+
+.btns-cancel{
+  color: red;
+}
+
+/* Pantallas medianas */
+@media (max-width: 1023px) {
+  
+  .btns-custom {
+    height: 30px; 
+  }
+
+}
+
+/*   Small screens */
+@media (max-width: 599px) {
+
+  .button-accept-cancel {
+    display: flex;
+    justify-content: center;
+    gap: 5px;               
+  }
+  
+  .btns-custom {
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: none;
+    border: none;
+    width: 80px;
+    height: 20px; 
+  }
+}
+
+
 
 

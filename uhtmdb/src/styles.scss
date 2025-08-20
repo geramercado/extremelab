@@ -46,4 +46,41 @@ $blue-dark-color: #00468cff !important;
 }
 
 
+/*   -------------------         HTML Dialog Periodic table                ---------------------------------*/
+
+@media (min-width: 1024px) {
+
+  
+  .cdk-overlay-pane .mat-mdc-dialog-surface {
+    width: 70vw !important;
+    height: 75vh !important;
+    max-width: none !important;
+    max-height: none !important;
+    left: 50% !important;
+    transform: translate( -50%, 2%) !important;
+  }
+  
+
+}
+
+
+/* Pantallas medianas */
+@media (max-width: 1023px) {
+
+  .cdk-overlay-pane .mat-mdc-dialog-surface {
+    width: 80vw;
+    height: 37vh;
+  }
+
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 599px) {
+
+  .cdk-overlay-pane .mat-mdc-dialog-surface {
+    width: 90vw;
+    height: 37vh;
+  }
+
+}
 
