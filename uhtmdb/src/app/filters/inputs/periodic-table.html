@@ -7,6 +7,7 @@
       <div class="col">
 
         <div class="periodic-table">
+
           <div
             *ngFor="let el of elements"
             class="element"
@@ -15,9 +16,26 @@
             [style.gridRow]="el.period"
             (click)="toggle(el.symbol)"
             title="{{ el.symbol }}"
+            (mouseenter)="hoveredElement = el"
+            (mouseleave)="hoveredElement = null"
           >
             <span>{{ el.symbol }}</span>
           </div>
+
+          <!--  Hover element with labels -->
+          <div
+            class="element-info"
+            *ngIf="hoveredElement"
+            style="grid-column: 3 / span 2; grid-row: 2 / span 2;"
+          >
+            <div class="info-content">
+              <div class="symbol">{{ hoveredElement.symbol }}</div>
+              <div class="name">{{ hoveredElement.name }}</div>
+              <div class="category">{{ hoveredElement.category }}</div>
+            </div>
+          </div>
+
+          
         </div>
 
       </div>

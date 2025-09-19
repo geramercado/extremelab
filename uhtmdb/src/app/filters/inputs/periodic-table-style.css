@@ -55,6 +55,36 @@
   border-color: #388e3c;
 }
 
+/*  Hovered Element  */
+
+.element-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #444;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.info-content {
+  text-align: center;
+}
+
+.info-content .symbol {
+  font-size: 2rem;
+}
+
+.info-content .name {
+  font-size: 1rem;
+}
+
+.info-content .category {
+  font-size: 0.9rem;
+  color: gray;
+}
+
 
 @media (max-width: 1023px) {
 

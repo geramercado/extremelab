@@ -5,7 +5,7 @@
         <div class="row">
 
             <div class="col seven-buttons">
-                <button mat-fab class="custom-button">
+                <button mat-fab class="custom-button" (click)="onFirstButtonClick()">
                     <img src="b5.webp" alt="">
                 </button>
                 <button mat-fab class="custom-button">
@@ -40,3 +40,60 @@
     </div>
     
 </div>
+
+<!-- Sidebar with options -->
+
+<div class="sidebar" [class.open]="showSidebar">
+
+    <div class="sidebar-header">
+      <h5>Filters</h5>
+      <button class="btn-close" (click)="onFirstButtonClick(); selectFilter(null)"></button>
+    </div>
+  
+    <!-- Options list -->
+    <div class="list-group">
+        
+        <div *ngFor="let filter of filters; let i = index">
+      
+          <button
+            class="list-group-item list-group-item-action text-start"
+            (click)="selectFilter(filter)">
+            {{ filter.title }}
+          </button>
+      
+          <!-- Container to show -->
+          <div *ngIf="selectedFilter === filter" class="p-3 border rounded bg-light">
+                <label for="range-{{i}}" class="form-label">
+                    Range ({{filter.min}} - {{filter.max}})
+                </label>
+                <input
+                    id="range-{{i}}"
+                    type="range"
+                    class="form-range"
+                    [min]="filter.min"
+                    [max]="filter.max"
+                    [(ngModel)]="filter.valueInitial">
+                <div>Selected value: {{ filter.valueInitial }}</div>
+        
+                <label for="unit-{{i}}" class="form-label mt-2">Unit</label>
+                <select id="unit-{{i}}" class="form-select" [(ngModel)]="filter.unit">
+                    <option value="m">m</option>
+                    <option value="s">s</option>
+                    <option value="kg">kg</option>
+                </select>
+          </div>
+      
+        </div>
+      </div>
+    
+</div>
+
+<!-- Overlay sidebar -->
+<div 
+  class="overlay" 
+  *ngIf="showSidebar" 
+  (click)="onFirstButtonClick(); selectFilter(null)">
+</div>
+
+
+
