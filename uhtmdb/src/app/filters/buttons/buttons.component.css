@@ -107,3 +107,10 @@
     background: rgba(0,0,0,0.4);
     z-index: 499;
 }
+
+mat-slider {
+    width: 200px;
+}
+  
+  
+
