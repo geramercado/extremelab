@@ -67,23 +67,32 @@
 
                 <div *ngFor="let p of clasificationSelected.properties">
                     
-                    <label  style="color: #f7f9fa;">
-                        -------------------------
-                    </label>
                     <label class="form-label">
-                        Range ({{p.min}} - {{p.max}})
+                        {{p.name}}
                     </label>
                     
-                    <mat-slider [min]="p.min" [max]="p.max" step="1" discrete="true" range>
-                        <input matSliderStartThumb>
-                        <input matSliderEndThumb>
-                    </mat-slider>              
+                        <mat-slider [min]="p.min" [max]="p.max" step="1" discrete="true" range>
+                            <input matSliderStartThumb>
+                            <input matSliderEndThumb>
+                        </mat-slider>
+                        
+                        <div class="min-max-input">
+
+                            <mat-form-field class="min-form">
+                                <mat-label>Min value</mat-label>
+                                <input matInput type="number" [(ngModel)]="p.min">
+                            </mat-form-field>
+        
+                            <mat-form-field class="max-form">
+                                <mat-label>Max value</mat-label>
+                                <input matInput type="number"  [(ngModel)]="p.max">
+                            </mat-form-field>
+
+                        </div>
             
                     <label class="form-label mt-2">Unit</label>
-                    <select id="unit-{{i}}" class="form-select">
-                        <option value="m">m</option>
-                        <option value="s">s</option>
-                        <option value="kg">kg</option>
+                    <select id="unit-{{i}}" class="form-select" >
+                        <option [value]="p.standardized_unit" selected>{{p.standardized_unit}}</option>
                     </select>
 
                 </div>

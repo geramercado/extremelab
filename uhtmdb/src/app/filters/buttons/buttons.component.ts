@@ -7,6 +7,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { ClasificationService } from '../../services/clasification.service';
 import { Clasification } from '../../interface/clasification.model';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -19,7 +20,8 @@ import { MatInputModule } from '@angular/material/input';
     CommonModule,
     FormsModule,
     MatSliderModule,
-    MatInputModule
+    MatInputModule,
+    MatFormFieldModule
   ],
   templateUrl: './buttons.component.html',
   styleUrl: './buttons.component.css'
@@ -65,7 +67,6 @@ export class ButtonsComponent {
     this.clasificationService.getClasification().subscribe(data => {
       this.clasifications = data;
     });
-    
   }
 
   // Get by id
@@ -81,7 +82,6 @@ export class ButtonsComponent {
   }
 
   //range in inputs mat-slider
-  
   
 
 }
