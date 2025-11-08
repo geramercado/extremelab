@@ -65,27 +65,30 @@
           <!-- Container to show -->
           <div *ngIf="clasificationSelected == c" class="p-3 border rounded bg-light">
 
-                <div *ngFor="let p of clasificationSelected.properties">
+                <div *ngFor="let p of clasificationSelected.properties"> <!-- -->
                     
-                    <label class="form-label">
-                        {{p.name}}
-                    </label>
+                    <div class="d-flex justify-content-between align-items-center mt-3 pb-1" style="gap: 0.5rem;">
+                        <label class="form-label mb-0">
+                          {{p.name}}
+                        </label>
+                        <button mat-raised-button color="primary" (click)="resetLocal(p)">Reset</button>
+                    </div>
                     
-                        <mat-slider [min]="p.min" [max]="p.max" step="1" discrete="true" range>
-                            <input matSliderStartThumb>
-                            <input matSliderEndThumb>
+                        <mat-slider [min]="p.min" [max]="p.max" step="1" range>
+                            <input matSliderStartThumb [(ngModel)]="p.startValue">
+                            <input matSliderEndThumb [(ngModel)]="p.endValue">
                         </mat-slider>
-                        
+
                         <div class="min-max-input">
 
                             <mat-form-field class="min-form">
                                 <mat-label>Min value</mat-label>
-                                <input matInput type="number" [(ngModel)]="p.min">
+                                <input matInput type="number" [(ngModel)]="p.startValue">
                             </mat-form-field>
         
                             <mat-form-field class="max-form">
                                 <mat-label>Max value</mat-label>
-                                <input matInput type="number"  [(ngModel)]="p.max">
+                                <input matInput type="number" [(ngModel)]="p.endValue">
                             </mat-form-field>
 
                         </div>
@@ -95,6 +98,10 @@
                         <option [value]="p.standardized_unit" selected>{{p.standardized_unit}}</option>
                     </select>
 
+                </div>
+
+                <div class="d-flex justify-content-end mt-3">
+                    <button mat-raised-button color="accent" (click)="resetAll()">Reset all</button>
                 </div>
                 
           </div>

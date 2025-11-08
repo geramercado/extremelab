@@ -5,10 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
 import { ClasificationService } from '../../services/clasification.service';
-import { Clasification } from '../../interface/clasification.model';
+import { Clasification, Property } from '../../interface/clasification.model';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
 
 
 @Component({
@@ -50,22 +49,34 @@ export class ButtonsComponent {
   
 
   clasifications: Clasification[] = [];
-
   clasificationSelected?: Clasification;
-
   showSidebar = false;
-
+  valueStart: number = 0;
+  valueEnd: number = 0;
   constructor(private clasificationService: ClasificationService) {}
 
-  // To show sidebar
   onShowSidebar(){
     this.showSidebar = !this.showSidebar;
+    if (this.showSidebar) {
+      document.body.style.overflow = 'hidden'; //background scroll locked
+    } else {
+      document.body.style.overflow = ''; //unlocked
+    }
   }
+
 
   // Get all
   loadClasifications() {
     this.clasificationService.getClasification().subscribe(data => {
-      this.clasifications = data;
+      this.clasifications = data.map((c: any) => ({
+        ...c,
+        properties: c.properties.map((p: any) => ({
+          ...p,
+          startValue: p.min,
+          endValue: p.max
+        }))
+      }));
+        
     });
   }
 
@@ -81,7 +92,23 @@ export class ButtonsComponent {
     this.clasificationSelected = this.clasificationSelected === clasification ? null : clasification;
   }
 
-  //range in inputs mat-slider
+  //trackBy
+  trackByFn(index: number, item: any): number {
+    console.log('trackBy llamado para', item.name);
+    return item.id;
+  }
+  
+  resetAll() {
+    this.clasificationSelected?.properties.forEach(p => {
+      p.startValue = p.min;
+      p.endValue = p.max;
+    });
+  }
+
+  resetLocal(property: any) {
+    property.startValue = property.min;
+    property.endValue = property.max;
+  }
   
 
 }

@@ -7,6 +7,8 @@ export interface Property{
     standardized_unit: string;
     min: number;
     max: number;
+    startValue?: number;
+    endValue?: number;
 }
 
 export interface Clasification {

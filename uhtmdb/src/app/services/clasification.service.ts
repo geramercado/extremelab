@@ -29,14 +29,19 @@ export class ClasificationService{
           clasification_name: 'Mechanical properties',
           properties: [
             { id: 101, name: 'Density', standardized_unit: 'kg/m3', min: 500, max: 8000 },
-            { id: 102, name: 'Resistance', standardized_unit: 'MPa', min: 50, max: 600 }
+            { id: 102, name: 'Resistance', standardized_unit: 'MPa', min: 50, max: 600 },
+            { id: 103, name: 'Hardeness', standardized_unit: 'kg', min: 15, max: 300 },
+            { id: 104, name: 'Ductility', standardized_unit: 'W', min: 25, max: 50 }
           ]
         },
         {
           clasification_id: 2,
           clasification_name: 'Thermodynamic properties',
           properties: [
-            { id: 201, name: 'Length', standardized_unit: 'cm', min: 10, max: 200 }
+            { id: 201, name: 'Length', standardized_unit: 'cm', min: 10, max: 200 },
+            { id: 202, name: 'Pressure', standardized_unit: 'P', min: 5, max: 20 },
+            { id: 203, name: 'Volume', standardized_unit: 'p', min: 100, max: 300 },
+            { id: 204, name: 'Entropy', standardized_unit: 'S', min: 55, max: 105 }
           ]
         }
       ];
